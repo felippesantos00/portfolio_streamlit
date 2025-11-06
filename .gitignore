@@ -1,22 +1,4 @@
 #Diretorios
 __pycache__/
-*/configs
-*/input*/*
-*/output*/*
-models
-*/scripts/env_whatsapp_metricas_app
-*/env
 teste_app/
-*/conf
 .git
-
-#Extensoes de arquivos
-.env
-.gitignore
-*.zip
-*.csv
-*.log
-*.png
-#Arquivos
-metrics.py
-teste.py
