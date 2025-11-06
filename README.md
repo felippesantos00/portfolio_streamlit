@@ -1,128 +1,121 @@
-# 📊 WhatsApp Métricas App
+# 🚀 Portfolio Streamlit
 
-Aplicação desenvolvida em **Streamlit** para análise e visualização de métricas de conversas do **WhatsApp**.  
-O projeto faz parte do portfólio de aplicações desenvolvidas para demonstrar habilidades em **análise de dados**, **automação** e **visualização interativa** com **Python**.
+Um conjunto de aplicações interativas desenvolvidas em **Python + Streamlit**, com foco em **análise de dados**, **visualização interativa** e **automação de insights**.
 
----
-
-## 🚀 Objetivo
-
-O **WhatsApp Métricas App** permite importar e processar exportações de conversas do WhatsApp, extraindo métricas úteis como:
-
-- Quantidade de mensagens por participante  
-- Horários e dias mais ativos  
-- Emojis e palavras mais utilizadas  
-- Visualizações gráficas de engajamento  
-
-A ideia é transformar simples históricos de conversas em **insights interativos**, úteis para estudos de comportamento, produtividade e comunicação.
+Cada aplicação dentro deste repositório é independente e tem seu próprio propósito, documentação e scripts de execução.  
+O objetivo é demonstrar o uso de **ciência de dados aplicada** em cenários do dia a dia — desde análise de conversas do WhatsApp até projeções financeiras.
 
 ---
 
-## 🧩 Estrutura do Projeto
+## 🧭 Estrutura do Repositório
 
 ```
 
-whatsapp_metricas_app/
+portfolio_streamlit/
 │
-├── .streamlit/
-│   └── config.toml                # Configuração visual do Streamlit (tema, layout etc.)
-│
-├── projeto_metricas_whatsapp.py   # Código principal da aplicação
-├── readme.md                      # Descrição e instruções do projeto
-│
-└── scripts/
-├── install.sh                 # Script de instalação dos requisitos
-├── requirements.txt           # Lista de dependências do Python
-└── start.sh                   # Script para inicializar o aplicativo
+├── consult_fipe_cars_app/                 # Consulta interativa de preços FIPE
+├── consulta_inmet_dados_historicos_app/   # Dados meteorológicos do INMET
+├── investments_projection_app/            # Simulador e dashboard financeiro
+└── whatsapp_metricas_app/                 # Análise de conversas do WhatsApp
 
 ````
 
----
-
-## 🧠 Tecnologias Utilizadas
-
-- **Python 3.9+**
-- **Streamlit**
-- **Pandas**
-- **Matplotlib / Plotly**
-- **Numpy**
-- **Emoji / Regex (para análise textual)**
+Cada pasta contém:
+- Um aplicativo principal (`.py`) desenvolvido em **Streamlit**  
+- Um diretório `scripts/` com os **instaladores, dependências e inicializadores**
+- Um `.streamlit/config.toml` para personalização visual
+- Seu próprio `README.md` explicando uso e funcionalidades específicas
 
 ---
 
-## ⚙️ Instalação e Execução
+## 💡 Aplicações Incluídas
 
-### 1. Clone o repositório
+### 📊 **WhatsApp Métricas App**
+Analisa conversas exportadas do WhatsApp e transforma em gráficos e insights.
+- Contagem de mensagens por autor, horário e dia da semana  
+- Nuvem de palavras e emojis mais usados  
+- Exportação dos dados em CSV  
+
+📂 Pasta: `whatsapp_metricas_app/`
+
+---
+
+### 🚗 **Consulta FIPE Carros**
+Interface simples para buscar valores de veículos diretamente da **tabela FIPE**.
+- Consulta interativa por marca, modelo e ano  
+- Atualização dinâmica dos dados  
+- Download em CSV  
+
+📂 Pasta: `consult_fipe_cars_app/`
+
+---
+
+### 🌦️ **Consulta INMET — Dados Históricos**
+Explora dados climáticos do **Instituto Nacional de Meteorologia (INMET)**.  
+Permite filtrar e visualizar temperaturas, chuvas e outras variáveis por cidade e período.
+
+📂 Pasta: `consulta_inmet_dados_historicos_app/`
+
+---
+
+### 💰 **Investments Projection App**
+Simula e projeta investimentos com base em taxas **CDI**, **Selic** e parâmetros personalizados.  
+Inclui também um **chatbot** para responder perguntas sobre finanças.
+
+📂 Pasta: `investments_projection_app/`
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Função Principal |
+|-------------|------------------|
+| [Python](https://www.python.org/) | Linguagem base |
+| [Streamlit](https://streamlit.io/) | Criação de interfaces web |
+| [Pandas](https://pandas.pydata.org/) | Manipulação e análise de dados |
+| [Plotly](https://plotly.com/python/) | Visualização de dados interativa |
+| [Matplotlib](https://matplotlib.org/) | Suporte a gráficos estáticos |
+| [WordCloud](https://amueller.github.io/word_cloud/) | Visualização textual |
+| [Requests](https://docs.python-requests.org/) | Comunicação com APIs externas |
+
+---
+
+## 📦 Como Executar um Projeto
+
+Cada subpasta contém scripts para instalação e execução.  
+Exemplo com o app do WhatsApp:
 
 ```bash
 git clone https://github.com/felippesantos00/portfolio_streamlit.git
-cd portfolio_streamlit/whatsapp_metricas_app
+cd portfolio_streamlit/whatsapp_metricas_app/scripts
+bash install.sh
+source env_whatsapp_metricas_app/Scripts/activate
+bash start.sh
 ````
 
-### 2. Crie o ambiente virtual
-
-```bash
-python -m venv env_whatsapp_metricas_app
-source env_whatsapp_metricas_app/bin/activate      # Linux / Mac
-env_whatsapp_metricas_app\Scripts\activate         # Windows
-```
-
-### 3. Instale as dependências
-
-```bash
-pip install -r scripts/requirements.txt
-```
-
-ou use o script pronto:
-
-```bash
-bash scripts/install.sh
-```
-
-### 4. Execute o aplicativo
-
-```bash
-streamlit run projeto_metricas_whatsapp.py
-```
-
-ou
-
-```bash
-bash scripts/start.sh
-```
-
-O app será iniciado em:
-
+O aplicativo abrirá automaticamente no navegador em:
 👉 [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 📈 Exemplos de Métricas
+## 🚀 Objetivo do Repositório
 
-* Top 10 participantes mais ativos
-* Frequência de mensagens por dia da semana
-* Padrões de envio (horário mais comum)
-* Emojis mais utilizados
-* Evolução de mensagens ao longo do tempo
+Este repositório serve como **portfólio prático** para:
 
----
-
-## 🧩 Próximos Passos
-
-* Adicionar exportação de gráficos em PDF/PNG
-* Criar painel de comparação entre grupos
-* Implementar análise de sentimento (NLP)
+* Demonstrar aplicações reais de **análise de dados e dashboards**
+* Mostrar domínio de bibliotecas populares do ecossistema Python
+* Explorar **automação e visualização interativa** de forma acessível
 
 ---
 
 ## 👨‍💻 Autor
 
 **Felippe Santos**
-Desenvolvedor Python e entusiasta em automação e análise de dados.
-📫 [LinkedIn](https://www.linkedin.com/in/felippesantos00) | [GitHub](https://github.com/felippesantos00)
+💡 Desenvolvedor Python | Data Enthusiast | Criador de soluções com Streamlit
+📫 [GitHub](https://github.com/felippesantos00) | [LinkedIn](https://www.linkedin.com/in/felippesantos00)
 
 ---
 
 ## Licença
 
-Este projeto está sob a licença **MIT** — sinta-se à vontade para usar e adaptar.
+Distribuído sob a licença **MIT** — utilize, aprenda e contribua!
