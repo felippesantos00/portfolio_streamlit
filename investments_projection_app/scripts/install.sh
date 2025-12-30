@@ -14,6 +14,7 @@ if [[ ! -d "$ENV_NAME" ]]; then
     echo "Installing dependencies..."
     pip install --upgrade pip
     pip install -r requirements.txt
+    pip freeze > installed_packages.txt
     echo "All dependencies installed."
 else
     echo "Virtual environment already exists."
